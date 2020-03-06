@@ -10,8 +10,19 @@
 <body>
 <div class="container">
     <h3>Cats available:</h3>
-
+    <table class="table table-striped table-dark">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+        </tr>
+        <tr th:each="cat: ${cats}">
+            <td th:text="${cat.id}"/>
+            <td th:text="${cat.nickname}"/>
+        </tr>
+    </table>
+    <div>
+        <a th:href="@{/cats/add}" class="btn btn-outline-dark">ADD A CAT HERE</a>
+    </div>
 </div>
-
 </body>
 </html>

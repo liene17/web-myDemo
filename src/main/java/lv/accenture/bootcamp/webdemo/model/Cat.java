@@ -1,6 +1,8 @@
 package lv.accenture.bootcamp.webdemo.model;
 
-public class Cat {
+import java.io.Serializable;
+
+public class Cat implements Serializable {
 
     private Long id;
 
