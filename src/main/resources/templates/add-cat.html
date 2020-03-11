@@ -13,14 +13,21 @@
         <div class="row">
             <div class="form-group col-md-8">
                 <label for="nickname" class="col-form-label">Nickname</label>
-                <input type="text" th:field="*{nickname}" class="form-control" id="nickname" placeholder="Title">
+                <input type="text" th:field="*{nickname}" class="form-control" id="nickname">
+                <span th:if="${#fields.hasErrors('nickname')}" th:errors="*{nickname}" class="text-danger"/>
+            </div>
+            <div class="form-group col-md-8">
                 <label for="age" class="col-form-label">Age</label>
-                <input type="text" th:field="*{age}" class="form-control" id="age" placeholder="Title">
+                <input type="text" th:field="*{age}" class="form-control" id="age">
+                <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}" class="text-danger"/>
+            </div>
+            <div class="form-group col-md-8">
                 <label for="photo" class="col-form-label">Photo URL</label>
-                <input type="text" th:field="*{photo}" class="form-control" id="photo" placeholder="Title">
-            </div>            <div class="form-group col-md-8">
-            <input type="submit" class="btn btn-dark" value="ADD A CAT">
-        </div>
+                <input type="text" th:field="*{photo}" class="form-control" id="photo">
+            </div>
+            <div class="form-group col-md-8">
+                <input type="submit" class="btn btn-dark" value="ADD A CAT">
+            </div>
         </div>
     </form>
 </div>
